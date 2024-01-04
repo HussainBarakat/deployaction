@@ -28,3 +28,6 @@ jobs:
         env:
           COMPOSER_AUTH:
         run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: Run test
+       run: vendor/bin/phpunit
+
