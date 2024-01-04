@@ -24,5 +24,6 @@ jobs:
         with:
           path:
           options: --exclude=*.log
+          run: echo 'no errors'
 
       
