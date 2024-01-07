@@ -45,3 +45,7 @@ jobs:
          DB_DATABASE: processcon_dev
 
         run: php artisan test
+      - name: Install front-end dependencies
+        run: |
+          npm install
+          npm run dev
