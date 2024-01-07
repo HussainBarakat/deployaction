@@ -18,7 +18,6 @@ jobs:
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup PHP
@@ -38,4 +37,11 @@ jobs:
           COMPOSER_AUTH:
         run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Run test
+        env:
+         DB_HOST: 127.0.0.1
+         DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+         DB_USERNAME: root
+         DB_PASSWORD: null
+         DB_DATABASE: processcon_dev
+
         run: php artisan test
