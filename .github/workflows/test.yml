@@ -61,7 +61,7 @@ jobs:
   
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-           cd /var/www/html/
+           cd /var/www/
 
            git checkout -f 
 
