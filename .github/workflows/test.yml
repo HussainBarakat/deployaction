@@ -49,3 +49,7 @@ jobs:
         run: |
           npm install
           npm run build
+      
+      - name: Creat deployement artifact
+        run: tar -czf app.gz --exculude=*.git --exclude=node_modules --exclude=tests *
+
