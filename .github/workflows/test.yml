@@ -48,7 +48,7 @@ jobs:
     #  - name: Install front-end dependencies
     #    run: |
     #      npm install
-    #     npm run build
+    # #    npm run build
       
       - name: Creat deployement artifact
         run: tar -czf app.gz *
