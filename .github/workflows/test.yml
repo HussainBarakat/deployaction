@@ -32,10 +32,10 @@ jobs:
         with:
           path:
           options: --exclude=*.log
-      - name: Install Copmoser dependencies
-        env:
-          COMPOSER_AUTH:
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    #  - name: Install Copmoser dependencies
+    #    env:
+    #     COMPOSER_AUTH:
+    #   run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Run test
         env:
          DB_HOST: 127.0.0.1
@@ -45,10 +45,10 @@ jobs:
          DB_DATABASE: processcon_dev
 
         run: php artisan test
-      - name: Install front-end dependencies
-        run: |
-          npm install
-          npm run build
+    #  - name: Install front-end dependencies
+    #    run: |
+    #      npm install
+    #     npm run build
       
       - name: Creat deployement artifact
         run: tar -czf app.gz *
@@ -63,6 +63,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
            cd /var/www/
+           git clone https://github.com/HussainBarakat/deployaction.git 
 
     
 

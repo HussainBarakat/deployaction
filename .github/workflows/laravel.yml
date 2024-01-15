@@ -2,9 +2,9 @@ name: PHP Setup
 
 on:
   push:
-    branches: ["main"]
+    branches: ["no"]
   pull_request:
-    branches: ["main"]
+    branches: ["no"]
 
 jobs:
   laravel-tests:
