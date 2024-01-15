@@ -51,5 +51,5 @@ jobs:
           npm run build
       
       - name: Creat deployement artifact
-        run: tar -czf app.gz *
+        run: tar -czf app.gz --exclude=tests*
 
