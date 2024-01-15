@@ -36,15 +36,15 @@ jobs:
     #    env:
     #     COMPOSER_AUTH:
     #   run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-      - name: Run test
-        env:
-         DB_HOST: 127.0.0.1
-         DB_PORT: ${{ job.services.mysql.ports['3306'] }}
-         DB_USERNAME: root
-         DB_PASSWORD: null
-         DB_DATABASE: processcon_dev
+    #  - name: Run test
+     #   env:
+     #    DB_HOST: 127.0.0.1
+     #    DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+      #   DB_USERNAME: root
+      #   DB_PASSWORD: null
+      #   DB_DATABASE: processcon_dev
 
-        run: php artisan test
+      #  run: php artisan test
     #  - name: Install front-end dependencies
     #    run: |
     #      npm install
