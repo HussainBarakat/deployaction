@@ -65,6 +65,8 @@ jobs:
            cd /var/www/deployaction
            git pull
            cp .env.example .env
+           chown -R www-data storage
+           chown -R www-data bootstrap/cache
            composer install
 
     
