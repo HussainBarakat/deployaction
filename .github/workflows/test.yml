@@ -63,6 +63,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
            cd /var/www/
+           git init
            git checkout -f 
            git pull
            composer install
