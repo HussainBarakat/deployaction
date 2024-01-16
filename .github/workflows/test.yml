@@ -64,6 +64,7 @@ jobs:
           script: |
            cd /var/www/deployaction
            git pull
+           cp .env.example .env
            composer install
 
     
