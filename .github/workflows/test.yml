@@ -68,6 +68,7 @@ jobs:
            chown -R www-data storage
            chown -R www-data bootstrap/cache
            composer install
+           php artisan key:generate
 
     
 
