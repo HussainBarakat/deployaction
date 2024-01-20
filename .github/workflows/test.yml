@@ -64,13 +64,13 @@ jobs:
           script: |
            cd /var/www/deployaction_image
            git pull
-           #cp .env.example .env
+           cp .env.example .env
            #chown -R www-data storage
            #chown -R www-data bootstrap/cache
            composer install
            php artisan migrate
            cd /va/www
-           rsync -ac time rsync -av /var/www/deployaction_image/ /var/www/deployaction/
+           rsync -av /var/www/deployaction_image/ /var/www/deployaction/
            #php artisan key:generate
 
     
