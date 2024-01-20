@@ -63,7 +63,6 @@ jobs:
           script: |
             cd /var/www/deployaction_image
             git pull https://github.com/HussainBarakat/deployaction.git main
-            #cp .env.example .env
             #chown -R www-data storage
             #chown -R www-data bootstrap/cache
             composer install
