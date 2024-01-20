@@ -53,7 +53,7 @@ jobs:
       - name: Creat deployement artifact
         run: tar -czf app.gz *
       - name: Deployment
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@main
         with:
           host: ${{ secrets.SSH_HOST }}
 
