@@ -53,7 +53,7 @@ jobs:
       - name: Creat deployement artifact
         run: tar -czf app.gz *
       - name: Deployment
-        uses: appleboy/ssh-action@main
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
 
@@ -62,6 +62,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /var/www/deployaction_image
+            mkdir Amiher
             git pull
             #cp .env.example .env
             #chown -R www-data storage
