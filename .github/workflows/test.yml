@@ -70,4 +70,4 @@ jobs:
             php artisan migrate
             php artisan key:generate
             cd /va/www
-            rsync -av /var/www/deployaction_image/ /var/www/deployaction/
+            rsync -ac /var/www/deployaction_image/ /var/www/deployaction/
