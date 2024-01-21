@@ -62,7 +62,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
            cd /var/www/deployaction
-           git pull
+           git pull  https://github.com/HussainBarakat/deployaction.git main
            #cp .env.example .env
            chown -R www-data storage
            chown -R www-data bootstrap/cache
